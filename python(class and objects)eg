@@ -1,1 +1,497 @@
+class customer:
+     ...:     def getcustomerdetail(self,name,id_no,email,createdat):
+     ...:         self.name=name
+     ...:         self.id_no=id_no
+     ...:         self.email=email
+     ...:         self.createdat=createdat
+     ...:     def displaycustomerdetail(self):
+     ...:         print('name=',self.name)
+     ...:         print('id_no=',self.id_no)
+     ...:         print('email=',self.email)
+     ...:         print('createdat=',self.createdat)
+     ...:
+
+In [175]: cus1=customer()
+
+In [176]: cus1.getcustomerdetail('rose','12AG','rosekevin30@gmail.com','9.00')
+
+In [177]: cus1.displaycustomerdetail()
+name= rose
+id_no= 12AG
+email= rosekevin30@gmail.com
+createdat= 9.00
+cus2=customer()
+
+In [180]: cus2.getcustomerdetail('bee','13AG','bee13@gmail.com','14.00')
+
+In [181]: cus2.displaycustomerdetail()
+name= bee
+id_no= 13AG
+email= bee13@gmail.com
+createdat= 14.00
+customer.displaycustomerdetail(cus1)
+name= rose
+id_no= 12AG
+email= rosekevin30@gmail.com
+createdat= 9.00
+
+In [184]: customer.displaycustomerdetail(cus2)
+name= bee
+id_no= 13AG
+email= bee13@gmail.com
+createdat= 14.00
+
+
+In [195]: class ratings:
+     ...:     def getalliddetails(self,id_no,customerid_no,driverid_no,tripid_no,rating,feedback):
+     ...:         self.id_no=id_no
+     ...:         self.customerid_no=customerid_no
+     ...:         self.driverid_no=driverid_no
+     ...:         self.tripid_no=tripid_no
+     ...:         self.rating=rating
+     ...:         self.feedback=feedback
+     ...:     def dispalyalliddetails(self):
+     ...:         print('id_no=',self.id_no)
+     ...:         print('customerid_no=',self.customerid_no)
+     ...:         print('driverid_no=',self.driverid_no)
+     ...:         print('tripid_no=',self.tripid_no)
+     ...:         print('rating=',self.rating)
+     ...:         print('feedback=',self.feedback)
+     rat1=ratings()
+
+In [197]: rat1.getalliddetails('1UB','C0011','D0011','T005','4star','GOOD')
+rat1.dispalyalliddetails()
+id_no= 1UB
+customerid_no= C0011
+driverid_no= D0011
+tripid_no= T005
+rating= 4star
+feedback= GOOD
+
+In [201]: rat1.getalliddetails('11UB','C0019','D0017','T0014','*****','V.GOOD')
+
+In [202]: rat1.dispalyalliddetails()
+id_no= 11UB
+customerid_no= C0019
+driverid_no= D0017
+tripid_no= T0014
+rating= *****
+feedback= V.GOOD
+
+
+In [237]: class employee():
+     ...:     state='TN'
+     ...:     def _init_(self,id_no,name,place):
+     ...:         self.id_no=id_no
+     ...:         self.name=name
+     ...:         self.place=place
+     ...:         employee.state=employee.state
+     ...:     def displayemp(self):
+     ...:         print(self.id_no,self.name,self.place)
+     ...:
+
+In [238]: emp1=employee('1','bee','trichy')
+
+In [239]: emp2=employee('2','tom','trichy')
+
+In [240]: emp2.name
+Out[240]: 'tom'
+
+In [241]: emp1.place
+Out[241]: 'trichy'
+
+
+class flowers():
+     ...:     def getdetails(self,flowername,colour,bee):
+     ...:         self.flowername=flowername
+     ...:         self.colour=colour
+     ...:         self.bee=bee
+     ...:     def displaydetails(self):
+     ...:         print('flowername=',self.flowername)
+     ...:         print('colour=',self.colour)
+     ...:         print('bee=',self.bee)
+     n [246]: fl1=flowers()
+
+In [247]: fl1.getdetails('rose','red','rosebee')
+50]: fl2=flowers()
+
+In [251]: fl2.getdetails('lotus','pink','lotusbee')
+
+In [252]: fl3=flowers()
+
+In [253]: fl3.getdetails('lilac','violet','lilacbee')
+
+In [254]: fl1.displaydetails()
+flowername= rose
+colour= red
+bee= rosebee
+
+In [255]: fl2.displaydetails()
+flowername= lotus
+colour= pink
+bee= lotusbee
+
+In [256]: fl3.displaydetails()
+flowername= lilac
+colour= violet
+bee= lilacbee
+
+In [257]: fl1.bee
+Out[257]: 'rosebee'
+
+In [258]: fl2.flowername
+Out[258]: 'lotus'
+
+In [259]: fl3.colour
+ut[259]: 'violet'
+
+
+class flowers():
+     ...:     def _init_(self,flowername,colour,bee):
+     ...:         self.flowername=flowername
+     ...:         self.colour=colour
+     ...:         self.bee=bee
+     ...:     def displaydetails(self):
+     ...:         print('flowername=',self.flowername)
+     ...:         print('colour=',self.colour)
+     ...:         print('bee=',self.bee)
+     ...:
+
+In [261]: fl1=flowers('lilac','purple','purplebee')
+
+In [262]: fl2=flowers('rose','yellow','rosebee')
+
+In [263]: fl3=flowers('jasmine','white','jasminebee')
+
+In [264]: fl1.displaydetails()
+flowername= lilac
+colour= purple
+bee= purplebee
+
+In [265]: fl2.displaydetails()
+flowername= rose
+colour= yellow
+bee= rosebee
+In [266]: fl3.displaydetails()
+flowername= jasmine
+colour= white
+bee= jasminebee
+
+In [267]: fl1.flowername
+Out[267]: 'lilac'
+
+In [268]: fl2.colour
+Out[268]: 'yellow'
+
+In [269]: fl3.bee
+Out[269]: 'jasminebee'
+
+
+class student:
+   ...:     def _init_(self,name,roll,salary):
+   ...:         self.name=name
+   ...:         self.roll=roll
+   ...:         self.salary=salary
+   ...:     def displaystudent(self):
+   ...:         print('name=',self.name)
+   ...:         print('roll=',self.roll)
+   ...:         print('salary=',self.salary)
+   ...:
+
+In [10]: obj1=student('rose',1,'trichy')
+
+In [11]: obj2=student('bee',2,'trichy')
+
+In [12]: obj1.name
+Out[12]: 'rose'
+
+In [13]: obj1=student('bee',2,30000)
+
+In [14]: obj2=student('rose',2,40000)
+
+In [15]: obj2.salary
+Out[15]: 40000
+ obj1.name
+Out[16]: 'bee'
+
+In [17]: getattr(obj1,'salary')
+Out[17]: 30000
+
+In [18]: getattr(obj2,'roll')
+Out[18]: 2
+
+In [19]: setattr(obj1,'name',''tom')
+  Cell In[19], line 1
+    setattr(obj1,'name',''tom')
+                             ^
+SyntaxError: unterminated string literal (detected at line 1)
+
+
+In [20]: setattr(obj1,'name','tom')
+
+In [21]: getattr(obj1,'name')
+Out[21]: 'tom'
+
+In [22]: student.dict
+---------------------------------------------------------------------------
+AttributeError                            Traceback (most recent call last)
+Cell In[22], line 1
+----> 1 student.dict
+
+AttributeError: type object 'student' has no attribute 'dict'
+
+In [23]: student._dict_
+Out[23]:
+mappingproxy({'_module': '__main_',
+              '_init': <function __main.student.__init_(self, name, roll, salary)>,
+              'displaystudent': <function _main_.student.displaystudent(self)>,
+              '_dict': <attribute '__dict_' of 'student' objects>,
+              '_weakref': <attribute '__weakref_' of 'student' objects>,
+              '_doc_': None})
+
+In [24]: help(student)
+Help on class student in module _main_:
+
+class student(builtins.object)
+ |  student(name, roll, salary)
+ |
+ |  Methods defined here:
+ |
+ |  _init_(self, name, roll, salary)
+ |      Initialize self.  See help(type(self)) for accurate signature.
+ |
+ |  displaystudent(self)
+ |
+ |  ----------------------------------------------------------------------
+ |  Data descriptors defined here:
+ |
+ |  _dict_
+ |      dictionary for instance variables (if defined)
+ |
+ |  _weakref_
+ |      list of weak references to the object (if defined)
+
+
+In [25]: class student(builtins.object)
+  Cell In[25], line 1
+    class student(builtins.object)
+SyntaxError: expected ':'
+
+
+In [26]: student._module_
+    ...:
+    ...:
+Out[26]: '_main_'
+
+In [27]: student._name_
+Out[27]: 'student'
+
+In [28]: student._dict_
+Out[28]:
+mappingproxy({'_module': '__main_',
+              '_init': <function __main.student.__init_(self, name, roll, salary)>,
+              'displaystudent': <function _main_.student.displaystudent(self)>,
+              '_dict': <attribute '__dict_' of 'student' objects>,
+              '_weakref': <attribute '__weakref_' of 'student' objects>,
+              '_doc_': None})
+
+In [29]: student._doc_
+
+
+
+class student():
+    ...:     def getstudentdata(self,__name,__age):
+    ...:         self.__name=__name
+    ...:         self.__age=__age
+    ...:     def displaystudent(self):
+    ...:         print('name=',self.__name)
+    ...:         print('age=',self.__age)
+    ...:
+
+In [11]: obj1=student()
+
+In [12]: obj1.getstudentdata('bee',5)
+
+In [13]: obj1.displaystudent
+Out[13]: <bound method student.displaystudent of <_main_.student object at 0x000001A7ED7C78D0>>
+
+In [14]: obj1.displaystudent()
+name= bee
+age= 5
+
+In [15]: obj1.name
+---------------------------------------------------------------------------
+AttributeError                            Traceback (most recent call last)
+Cell In[15], line 1
+----> 1 obj1.name
+AttributeError: 'student' object has no attribute 'name'
+
+In [16]:
+
+In [16]:
+
+In [16]: class student():
+    ...:     def getstudentdata(self,_name,_age):
+    ...:         self._name=_name
+    ...:         self._age=_age
+    ...:     def displaystudent(self):
+    ...:         print('name=',self._name)
+    ...:         print('age=',self._age)
+    ...:
+
+In [17]: obj1=student()
+
+In [18]: obj1.getstudentdata('bee',5)
+
+In [19]: obj1.displaystudent()
+name= bee
+age= 5
+
+In [20]: obj1.name
+---------------------------------------------------------------------------
+AttributeError                            Traceback (most recent call last)
+Cell In[20], line 1
+----> 1 obj1.name
+AttributeError: 'student' object has no attribute 'name'
+
+
+class student():
+    ...:     college='IMU'
+    ...:     def getstudentdata(self,_name,_age):
+    ...:         self._name=_name
+    ...:         self._age=_age
+    ...:     def displaystudent(self):
+    ...:         print('name=',self._name)
+    ...:         print('age=',self._age)
+    ...:
+
+In [22]: obj1=student()
+
+In [23]: obj1.college
+Out[23]: 'IMU'
+
+In [24]: obj1.getstudentdata('bee',5)
+
+In [25]: obj1.displaystudent()
+name= bee
+age= 5
+
+In [26]: obj1.age
+---------------------------------------------------------------------------
+AttributeError                            Traceback (most recent call last)
+Cell In[26], line 1
+----> 1 obj1.age
+
+AttributeError: 'student' object has no attribute 'age'
+
+In [27]: class student():
+    ...:
+    ...:     __college='IMU'
+    ...:     def getstudentdata(self,__name,__age):
+    ...:         self.__name=__name
+    ...:         self.__age=__age
+    ...:     def displaystudent(self):
+    ...:         print('name=',self.__name)
+    ...:         print('age=',self.__age)
+    ...:
+
+In [28]: obj1=student()
+
+In [29]: obj1.getstudentdata('bee',5)
+0]: obj1.displaystudent()
+name= bee
+age= 5
+
+In [31]: obj1.name
+---------------------------------------------------------------------------
+AttributeError                            Traceback (most recent call last)
+Cell In[31], line 1
+----> 1 obj1.name
+
+AttributeError: 'student' object has no attribute 'name'
+
+In [32]: student.college
+---------------------------------------------------------------------------
+AttributeError                            Traceback (most recent call last)
+Cell In[32], line 1
+----> 1 student.college
+
+AttributeError: type object 'student' has no attribute 'college'
+
+In [33]:
+
+
+
+ class student():
+    ...:     college='IMU'
+    ...:     def getstudentdata(self,name,age):
+    ...:         self.name=name
+    ...:         self.age=age
+    ...:     def displaystudent(self):
+    ...:         print('name=',self.name)
+    ...:         print('age=',self.age)
+    ...:         print('college=',student.college)
+    ...:
+
+In [55]: class teacher(student):
+    ...:     pass
+    ...:
+
+In [56]: obj1=teacher()
+
+In [57]: obj1.getstudentdata('bee',5)
+
+In [58]: obj1.displaystudent()
+name= bee
+age= 5
+college= IMU
+
+In [59]: student.college
+Out[59]: 'IMU'
+
+In [60]: obj2=student()
+
+In [61]: obj2.getstudentdata('tom',5)
+]: class student():
+    ...:     college='IMU'
+    ...:     def getstudentdata(self,name,age):
+    ...:         self.name=name
+    ...:         self.age=age
+    ...:     def displaystudent(self):
+    ...:         print('name=',self.name)
+    ...:         print('age=',self.age)
+    ...:         print('college=',student.college)
+    ...:
+
+In [55]: class teacher(student):
+    ...:     pass
+    ...:
+
+In [56]: obj1=teacher()
+
+In [57]: obj1.getstudentdata('bee',5)
+
+In [58]: obj1.displaystudent()
+name= bee
+age= 5
+college= IMU
+
+In [59]: student.college
+Out[59]: 'IMU'
+
+In [60]: obj2=student()
+
+In [61]: obj2.getstudentdata('tom',5)
+
+In [62]: obj2.displaystudent()
+name= tom
+age= 5
+college= IMU
+
+In [63]: obj1.name
+Out[63]: 'bee'
+
+In [64]: obj2.name
+Out[64]: 'tom'
+
 
