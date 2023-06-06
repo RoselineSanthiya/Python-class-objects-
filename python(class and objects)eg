@@ -11,20 +11,20 @@ class customer:
      ...:         print('createdat=',self.createdat)
      ...:
 
-In [175]: cus1=customer()
+ cus1=customer()
 
-In [176]: cus1.getcustomerdetail('rose','12AG','rosekevin30@gmail.com','9.00')
+ cus1.getcustomerdetail('rose','12AG','rosekevin30@gmail.com','9.00')
 
-In [177]: cus1.displaycustomerdetail()
+ cus1.displaycustomerdetail()
 name= rose
 id_no= 12AG
 email= rosekevin30@gmail.com
 createdat= 9.00
 cus2=customer()
 
-In [180]: cus2.getcustomerdetail('bee','13AG','bee13@gmail.com','14.00')
+ cus2.getcustomerdetail('bee','13AG','bee13@gmail.com','14.00')
 
-In [181]: cus2.displaycustomerdetail()
+cus2.displaycustomerdetail()
 name= bee
 id_no= 13AG
 email= bee13@gmail.com
@@ -35,14 +35,14 @@ id_no= 12AG
 email= rosekevin30@gmail.com
 createdat= 9.00
 
-In [184]: customer.displaycustomerdetail(cus2)
+ customer.displaycustomerdetail(cus2)
 name= bee
 id_no= 13AG
 email= bee13@gmail.com
 createdat= 14.00
 
 
-In [195]: class ratings:
+ class ratings:
      ...:     def getalliddetails(self,id_no,customerid_no,driverid_no,tripid_no,rating,feedback):
      ...:         self.id_no=id_no
      ...:         self.customerid_no=customerid_no
@@ -57,9 +57,9 @@ In [195]: class ratings:
      ...:         print('tripid_no=',self.tripid_no)
      ...:         print('rating=',self.rating)
      ...:         print('feedback=',self.feedback)
-     rat1=ratings()
-
-In [197]: rat1.getalliddetails('1UB','C0011','D0011','T005','4star','GOOD')
+    
+    rat1=ratings()
+ rat1.getalliddetails('1UB','C0011','D0011','T005','4star','GOOD')
 rat1.dispalyalliddetails()
 id_no= 1UB
 customerid_no= C0011
@@ -68,9 +68,9 @@ tripid_no= T005
 rating= 4star
 feedback= GOOD
 
-In [201]: rat1.getalliddetails('11UB','C0019','D0017','T0014','*****','V.GOOD')
+ rat1.getalliddetails('11UB','C0019','D0017','T0014','*****','V.GOOD')
 
-In [202]: rat1.dispalyalliddetails()
+ rat1.dispalyalliddetails()
 id_no= 11UB
 customerid_no= C0019
 driverid_no= D0017
@@ -78,8 +78,7 @@ tripid_no= T0014
 rating= *****
 feedback= V.GOOD
 
-
-In [237]: class employee():
+ class employee():
      ...:     state='TN'
      ...:     def _init_(self,id_no,name,place):
      ...:         self.id_no=id_no
@@ -90,15 +89,15 @@ In [237]: class employee():
      ...:         print(self.id_no,self.name,self.place)
      ...:
 
-In [238]: emp1=employee('1','bee','trichy')
+ emp1=employee('1','bee','trichy')
 
-In [239]: emp2=employee('2','tom','trichy')
+ emp2=employee('2','tom','trichy')
 
-In [240]: emp2.name
-Out[240]: 'tom'
+ emp2.name
+ 'tom'
 
-In [241]: emp1.place
-Out[241]: 'trichy'
+ emp1.place
+ 'trichy'
 
 
 class flowers():
@@ -110,40 +109,38 @@ class flowers():
      ...:         print('flowername=',self.flowername)
      ...:         print('colour=',self.colour)
      ...:         print('bee=',self.bee)
-     n [246]: fl1=flowers()
+    
+ fl1=flowers()
+ fl1.getdetails('rose','red','rosebee')
+ fl2=flowers()
+ fl2.getdetails('lotus','pink','lotusbee')
+ fl3=flowers()
 
-In [247]: fl1.getdetails('rose','red','rosebee')
-50]: fl2=flowers()
+ fl3.getdetails('lilac','violet','lilacbee')
 
-In [251]: fl2.getdetails('lotus','pink','lotusbee')
-
-In [252]: fl3=flowers()
-
-In [253]: fl3.getdetails('lilac','violet','lilacbee')
-
-In [254]: fl1.displaydetails()
+ fl1.displaydetails()
 flowername= rose
 colour= red
 bee= rosebee
 
-In [255]: fl2.displaydetails()
+ fl2.displaydetails()
 flowername= lotus
 colour= pink
 bee= lotusbee
 
-In [256]: fl3.displaydetails()
+fl3.displaydetails()
 flowername= lilac
 colour= violet
 bee= lilacbee
 
-In [257]: fl1.bee
-Out[257]: 'rosebee'
+ fl1.bee
+ 'rosebee'
 
-In [258]: fl2.flowername
-Out[258]: 'lotus'
+ fl2.flowername
+ 'lotus'
 
-In [259]: fl3.colour
-ut[259]: 'violet'
+ fl3.colour
+ 'violet'
 
 
 class flowers():
