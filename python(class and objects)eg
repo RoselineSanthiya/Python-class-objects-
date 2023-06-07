@@ -217,13 +217,6 @@ Out[17]: 30000
 In [18]: getattr(obj2,'roll')
 Out[18]: 2
 
-In [19]: setattr(obj1,'name',''tom')
-  Cell In[19], line 1
-    setattr(obj1,'name',''tom')
-                             ^
-SyntaxError: unterminated string literal (detected at line 1)
-
-
 In [20]: setattr(obj1,'name','tom')
 
 In [21]: getattr(obj1,'name')
@@ -268,13 +261,6 @@ class student(builtins.object)
  |  _weakref_
  |      list of weak references to the object (if defined)
 
-
-In [25]: class student(builtins.object)
-  Cell In[25], line 1
-    class student(builtins.object)
-SyntaxError: expected ':'
-
-
 In [26]: student._module_
     ...:
     ...:
@@ -291,41 +277,8 @@ mappingproxy({'_module': '__main_',
               '_dict': <attribute '__dict_' of 'student' objects>,
               '_weakref': <attribute '__weakref_' of 'student' objects>,
               '_doc_': None})
+              
 
-In [29]: student._doc_
-
-
-
-class student():
-    ...:     def getstudentdata(self,__name,__age):
-    ...:         self.__name=__name
-    ...:         self.__age=__age
-    ...:     def displaystudent(self):
-    ...:         print('name=',self.__name)
-    ...:         print('age=',self.__age)
-    ...:
-
-In [11]: obj1=student()
-
-In [12]: obj1.getstudentdata('bee',5)
-
-In [13]: obj1.displaystudent
-Out[13]: <bound method student.displaystudent of <_main_.student object at 0x000001A7ED7C78D0>>
-
-In [14]: obj1.displaystudent()
-name= bee
-age= 5
-
-In [15]: obj1.name
----------------------------------------------------------------------------
-AttributeError                            Traceback (most recent call last)
-Cell In[15], line 1
-----> 1 obj1.name
-AttributeError: 'student' object has no attribute 'name'
-
-In [16]:
-
-In [16]:
 
 In [16]: class student():
     ...:     def getstudentdata(self,_name,_age):
